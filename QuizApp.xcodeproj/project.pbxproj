@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D9398256283129FA00E41FE2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9398254283129FA00E41FE2 /* WelcomeViewController.swift */; };
 		D9398257283129FA00E41FE2 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9398255283129FA00E41FE2 /* WelcomeView.xib */; };
+		D939825C2831A22700E41FE2 /* QuizSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939825A2831A22700E41FE2 /* QuizSetupViewController.swift */; };
+		D939825D2831A22700E41FE2 /* QuizSetupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D939825B2831A22700E41FE2 /* QuizSetupView.xib */; };
 		D9D061EF2830F003001A2E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D061EE2830F003001A2E84 /* AppDelegate.swift */; };
 		D9D061F12830F003001A2E84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D061F02830F003001A2E84 /* SceneDelegate.swift */; };
 		D9D061F82830F005001A2E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D061F72830F005001A2E84 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		D9398254283129FA00E41FE2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D9398255283129FA00E41FE2 /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		D939825A2831A22700E41FE2 /* QuizSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSetupViewController.swift; sourceTree = "<group>"; };
+		D939825B2831A22700E41FE2 /* QuizSetupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizSetupView.xib; sourceTree = "<group>"; };
 		D9D061EB2830F003001A2E84 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D061EE2830F003001A2E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D061F02830F003001A2E84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D93982582831A18000E41FE2 /* QuizSetupModule */ = {
+			isa = PBXGroup;
+			children = (
+				D9D062122830F510001A2E84 /* Presenter */,
+				D93982592831A1E300E41FE2 /* View */,
+			);
+			name = QuizSetupModule;
+			sourceTree = "<group>";
+		};
+		D93982592831A1E300E41FE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D939825A2831A22700E41FE2 /* QuizSetupViewController.swift */,
+				D939825B2831A22700E41FE2 /* QuizSetupView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		D9D061E22830F003001A2E84 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				D9D0620C2830F36B001A2E84 /* ModuleBuilder */,
+				D93982582831A18000E41FE2 /* QuizSetupModule */,
 				D9D0620F2830F4A9001A2E84 /* WelcomeModule */,
 				D9D0620B2830F249001A2E84 /* Resources */,
 				D9D062032830F0C3001A2E84 /* Networking */,
@@ -120,7 +143,6 @@
 		D9D0620C2830F36B001A2E84 /* ModuleBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				D9D062122830F510001A2E84 /* Presenter */,
 				D9D0620D2830F38F001A2E84 /* ModuleBuilder.swift */,
 			);
 			name = ModuleBuilder;
@@ -210,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9398257283129FA00E41FE2 /* WelcomeView.xib in Resources */,
+				D939825D2831A22700E41FE2 /* QuizSetupView.xib in Resources */,
 				D9D061FB2830F005001A2E84 /* LaunchScreen.storyboard in Resources */,
 				D9D061F82830F005001A2E84 /* Assets.xcassets in Resources */,
 			);
@@ -223,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9D062142830F582001A2E84 /* QuizPresenter.swift in Sources */,
+				D939825C2831A22700E41FE2 /* QuizSetupViewController.swift in Sources */,
 				D9398256283129FA00E41FE2 /* WelcomeViewController.swift in Sources */,
 				D9D062052830F0DD001A2E84 /* ApiManager.swift in Sources */,
 				D9D061EF2830F003001A2E84 /* AppDelegate.swift in Sources */,

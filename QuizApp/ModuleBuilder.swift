@@ -1,13 +1,17 @@
 import UIKit
 protocol Builder {
-    static func createQuizModule() -> UIViewController
+    static func createWelcomeModule() -> UIViewController
+    static func createQuizSetupModule() -> UIViewController
 }
 
 class ModuleBuilder: Builder {
-    static func createQuizModule() -> UIViewController {
+    static func createWelcomeModule() -> UIViewController {
         let quizView = WelcomeViewController()
-        //let presenter = QuizPresenter(view: quizView)
-        //quizView.presenter = presenter
         return quizView
+    }
+    
+    static func createQuizSetupModule() -> UIViewController{
+        let setUpView = QuizSetupViewController()
+        return setUpView
     }
 }

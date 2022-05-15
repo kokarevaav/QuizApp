@@ -9,7 +9,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let quizVC = ModuleBuilder.createQuizModule()
+        let quizVC = ModuleBuilder.createWelcomeModule()
         let navBar = UINavigationController(rootViewController: quizVC)
         window?.rootViewController = navBar
         window?.makeKeyAndVisible()

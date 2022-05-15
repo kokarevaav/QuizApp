@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController">
             <connections>
+                <outlet property="readyButton" destination="gwJ-FO-hkc" id="JfN-hC-LJR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -59,6 +60,9 @@
                         <fontDescription key="titleFontDescription" type="system" pointSize="33"/>
                         <color key="baseForegroundColor" red="0.56263586139999999" green="0.76002624640000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="readyTouch:" destination="-1" eventType="touchUpInside" id="HLu-Xx-TYL"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
