@@ -19,6 +19,7 @@
 		D9D0620A2830F1D7001A2E84 /* QuestionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D062092830F1D7001A2E84 /* QuestionsInfo.swift */; };
 		D9D0620E2830F38F001A2E84 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D0620D2830F38F001A2E84 /* ModuleBuilder.swift */; };
 		D9D062142830F582001A2E84 /* QuizPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D062132830F582001A2E84 /* QuizPresenter.swift */; };
+		D9DE1E33283D7E140065C504 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE1E32283D7E140065C504 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D9D062092830F1D7001A2E84 /* QuestionsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsInfo.swift; sourceTree = "<group>"; };
 		D9D0620D2830F38F001A2E84 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		D9D062132830F582001A2E84 /* QuizPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPresenter.swift; sourceTree = "<group>"; };
+		D9DE1E32283D7E140065C504 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		D9D061ED2830F003001A2E84 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				D9DE1E31283D7DD70065C504 /* Model */,
 				D9D0620C2830F36B001A2E84 /* ModuleBuilder */,
 				D93982582831A18000E41FE2 /* QuizSetupModule */,
 				D9D0620F2830F4A9001A2E84 /* WelcomeModule */,
@@ -173,6 +176,14 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
+		D9DE1E31283D7DD70065C504 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9DE1E32283D7E140065C504 /* Settings.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,6 +260,7 @@
 				D939825C2831A22700E41FE2 /* QuizSetupViewController.swift in Sources */,
 				D9398256283129FA00E41FE2 /* WelcomeViewController.swift in Sources */,
 				D9D062052830F0DD001A2E84 /* ApiManager.swift in Sources */,
+				D9DE1E33283D7E140065C504 /* Settings.swift in Sources */,
 				D9D061EF2830F003001A2E84 /* AppDelegate.swift in Sources */,
 				D9D0620A2830F1D7001A2E84 /* QuestionsInfo.swift in Sources */,
 				D9D061F12830F003001A2E84 /* SceneDelegate.swift in Sources */,

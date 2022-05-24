@@ -1,31 +1,31 @@
 import Foundation
 
-enum ApiType {
-    var baseUrl : String {
-        return "https://opentdb.com"
-    }
+//enum ApiType {
+//    var baseUrl : String {
+//        return "https://opentdb.com"
+//    }
+//    
+//    case getQuestions(amount: String, category: String, difficulty: String)
+//    
+//    var headers : [String:String] {
+//        return [:]
+//    }
+//    
+//    var path : String {
+//        switch self {
+//        case .getQuestions(let amount, let category, let difficulty):
+//            return "/api.php?amount=\(amount)&category=\(category)&difficulty=\(difficulty)"
+//        }
+//    }
     
-    case getQuestions(amount: String, category: String, difficulty: String)
-    
-    var headers : [String:String] {
-        return [:]
-    }
-    
-    var path : String {
-        switch self {
-        case .getQuestions(let amount, let category, let difficulty):
-            return "/api.php?amount=\(amount)&category=\(category)&difficulty=\(difficulty)"
-        }
-    }
-    
-    var request : URLRequest {
-        let url = URL(string: path, relativeTo: URL(string: baseUrl)!)!
-        var request = URLRequest(url: url)
-        request.allHTTPHeaderFields = headers
-        request.httpMethod = "GET"
-        return request
-    }
-}
+//    var request : URLRequest {
+//        let url = URL(string: path, relativeTo: URL(string: baseUrl)!)!
+//        var request = URLRequest(url: url)
+//        request.allHTTPHeaderFields = headers
+//        request.httpMethod = "GET"
+//        return request
+//    }
+//}
 
 class ApiManager {
     
