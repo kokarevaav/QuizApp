@@ -28,12 +28,25 @@ enum ApiType {
 }
 
 struct Categories {
-    static let categoriesList: [String : String] = ["General Knowledge" : "9",
-                                                    "Films" : "11",
-                                                    "History" : "23",
-                                                    "Geography" : "22",
-                                                    "Animals" : "27",
-                                                    "Music" : "12",
-                                                    "Books" : "10",
-                                                    "Art" : "25"]
+    static let categoriesDictionary: [String : String] = ["General Knowledge" : "9",
+                                                          "Films" : "11",
+                                                          "History" : "23",
+                                                          "Geography" : "22",
+                                                          "Animals" : "27",
+                                                          "Music" : "12",
+                                                          "Books" : "10",
+                                                          "Art" : "25"]
+    static let categoriesList = ["General Knowledge",
+                                 "Films",
+                                 "History",
+                                 "Geography",
+                                 "Animals",
+                                 "Music",
+                                 "Books",
+                                 "Art"]
+}
+struct Difficulties {
+    static let difficultyDictionary: [Float : String] = [1 : "easy",
+                                                         2 : "medium",
+                                                         3 : "hard"]
 }

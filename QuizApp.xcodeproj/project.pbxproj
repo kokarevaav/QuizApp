@@ -88,13 +88,13 @@
 		D9D061ED2830F003001A2E84 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				D9DE1E31283D7DD70065C504 /* Model */,
-				D9D0620C2830F36B001A2E84 /* ModuleBuilder */,
 				D93982582831A18000E41FE2 /* QuizSetupModule */,
 				D9D0620F2830F4A9001A2E84 /* WelcomeModule */,
-				D9D0620B2830F249001A2E84 /* Resources */,
+				D9DE1E31283D7DD70065C504 /* Model */,
 				D9D062032830F0C3001A2E84 /* Networking */,
+				D9D0620C2830F36B001A2E84 /* ModuleBuilder */,
 				D9D062022830F09E001A2E84 /* Supporting files */,
+				D9D0620B2830F249001A2E84 /* Resources */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";

@@ -12,6 +12,8 @@ class ModuleBuilder: Builder {
     
     static func createQuizSetupModule() -> UIViewController{
         let setUpView = QuizSetupViewController()
+        let quizPresenter = QuizPresenter(view: setUpView)
+        setUpView.presenter = quizPresenter
         return setUpView
     }
 }
