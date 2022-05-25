@@ -31,34 +31,28 @@
                                 <constraint firstAttribute="width" constant="248" id="YUh-pz-2xo"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button">
+                            <buttonConfiguration key="configuration" style="plain">
                                 <backgroundConfiguration key="background" cornerRadius="30">
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </backgroundConfiguration>
-                                <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                <color key="baseForegroundColor" red="0.56263586139999999" green="0.76002624640000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZb-sC-epW">
                             <rect key="frame" x="0.0" y="97" width="248" height="50"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button">
+                            <buttonConfiguration key="configuration" style="plain">
                                 <backgroundConfiguration key="background" cornerRadius="30">
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </backgroundConfiguration>
-                                <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                <color key="baseForegroundColor" red="0.56263586139999999" green="0.76002624640000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0w-eP-i52">
                             <rect key="frame" x="0.0" y="194" width="248" height="50"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button">
+                            <buttonConfiguration key="configuration" style="plain">
                                 <backgroundConfiguration key="background" cornerRadius="30">
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </backgroundConfiguration>
-                                <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                <color key="baseForegroundColor" red="0.56263586139999999" green="0.76002624640000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </buttonConfiguration>
                         </button>
                     </subviews>
@@ -69,8 +63,8 @@
                         <constraint firstItem="XZb-sC-epW" firstAttribute="width" secondItem="2ma-QZ-snD" secondAttribute="width" id="pGN-TK-oDJ"/>
                     </constraints>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24H-fk-qaT">
-                    <rect key="frame" x="19.5" y="144" width="375" height="36"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24H-fk-qaT">
+                    <rect key="frame" x="19.5" y="144" width="375" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="375" id="kOl-oq-wer"/>
                     </constraints>

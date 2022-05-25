@@ -18,18 +18,12 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        if (presenter.getQuestions().isEmpty) {
-            questionLabel.text = ""
-            answer1Button.titleLabel?.text = ""
-            answer2Button.titleLabel?.text = ""
-            answer3Button.titleLabel?.text = ""
-        } else {
-            questionLabel.text = presenter.getQuestions()[0].question
-            answer1Button.setTitle(presenter.getQuestions()[0].incorrectAnswers![0], for: .normal)
-            answer2Button.setTitle(presenter.getQuestions()[0].correctAnswer, for: .normal)
-            answer3Button.setTitle(presenter.getQuestions()[0].incorrectAnswers![1], for: .normal) 
+        if let question = presenter.getCurrQuestion() {
+            questionLabel.text = question.question
+            answer1Button.setTitle(question.correctAnswer, for: .normal)
+            answer2Button.setTitle(presenter.getAnswers()[0], for: .normal)
+            answer3Button.setTitle(presenter.getAnswers()[1], for: .normal)
         }
-       
     }
 
 }

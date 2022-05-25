@@ -23,6 +23,7 @@ class ModuleBuilder: Builder {
         let quizPresenter = QuizPresenter(view: quizView)
         ApiManager.apiManager.getQuestions(category: category, difficulty: difficulty) { data in
             quizPresenter.questions = data
+            quizPresenter.currentQuestion = quizPresenter.questions.popLast()
             quizView.reloadView()
         }
         quizPresenter.amount = Int(AmountOfQuestions.amountDictionary[difficulty]!) ?? 0
