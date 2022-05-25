@@ -2,27 +2,30 @@ import Foundation
 
 protocol QuizPresenterProtocol: AnyObject {
     init(view: QuizViewProtocol)
-    func getCategoriesList() -> [String]
-    func addSettings()
+    func getQuestions() -> [Result]
+    //func getAnswers() -> [[String]]
 }
 
 class QuizPresenter: QuizPresenterProtocol {
     let view: QuizViewProtocol
-    var difficulty: Float
-    var category: String
-
+    var questions: [Result]
+    var amount: Int = 0
     required init(view: QuizViewProtocol) {
         self.view = view
-        self.difficulty = 0
-        self.category = ""
+        self.questions = []
     }
     
-    func getCategoriesList() -> [String] {
-        return Categories.categoriesList
+    func getQuestions() -> [Result] {
+        return questions
     }
     
-    func addSettings() {
-        difficulty = view.getDifficultyLevel()
-        category = view.getSelectedCategory()
-    }
+//    func getAnswers() -> [[String]] {
+//        if (questions.isEmpty) {
+//            return
+//        }
+//        else {
+//            var answersTitles: [[String]] = [[]]
+//
+//        }
+//    }
 }

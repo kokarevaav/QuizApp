@@ -50,3 +50,9 @@ struct Difficulties {
                                                          2 : "medium",
                                                          3 : "hard"]
 }
+
+struct AmountOfQuestions {
+    static let amountDictionary: [String : String] = ["easy" : "15",
+                                                      "medium" : "10",
+                                                      "hard" : "10"]
+}

@@ -1,6 +1,6 @@
 import UIKit
 
-protocol QuizViewProtocol: AnyObject {
+protocol SetupViewProtocol: AnyObject {
     func getSelectedCategory() -> String
     func getDifficultyLevel() -> Float
 }
@@ -11,8 +11,8 @@ class QuizSetupViewController: UIViewController {
     @IBOutlet var difficultySlider: UISlider!
     @IBOutlet var doneButton: UIButton!
     
-    var presenter: QuizPresenterProtocol!
-    var selectedCategory: String!
+    var presenter: SetupPresenterProtocol!
+    var selectedCategory: String! = "General Knowledge"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,9 @@ class QuizSetupViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-        presenter.addSettings()
+        let quizViewController = ModuleBuilder.createQuizModule(difficulty: presenter.getSettings().difficulty, category: presenter.getSettings().category)
+        navigationController?.pushViewController(quizViewController, animated: true)
+        
     }
 }
 
@@ -52,7 +54,7 @@ extension QuizSetupViewController: UIPickerViewDelegate {
     }
 }
 
-extension QuizSetupViewController: QuizViewProtocol {
+extension QuizSetupViewController: SetupViewProtocol {
     func getSelectedCategory() -> String {
         return selectedCategory
     }
