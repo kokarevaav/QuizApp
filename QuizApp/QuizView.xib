@@ -9,9 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="QuizApp" customModuleProvider="target">
             <connections>
-                <outlet property="answer1Button" destination="2ma-QZ-snD" id="IUh-xN-eGU"/>
-                <outlet property="answer2Button" destination="XZb-sC-epW" id="THm-Cx-PCi"/>
-                <outlet property="answer3Button" destination="d0w-eP-i52" id="BTB-3K-7eO"/>
+                <outlet property="buttonsView" destination="pIA-rK-q4j" id="mRK-Xl-oab"/>
                 <outlet property="questionLabel" destination="24H-fk-qaT" id="qIt-ke-pe9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,49 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-fr-XhU">
-                    <rect key="frame" x="83" y="418" width="248" height="244"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ma-QZ-snD">
-                            <rect key="frame" x="0.0" y="0.0" width="248" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="7ud-eg-vVh"/>
-                                <constraint firstAttribute="width" constant="248" id="YUh-pz-2xo"/>
-                            </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <backgroundConfiguration key="background" cornerRadius="30">
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </backgroundConfiguration>
-                            </buttonConfiguration>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZb-sC-epW">
-                            <rect key="frame" x="0.0" y="97" width="248" height="50"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <backgroundConfiguration key="background" cornerRadius="30">
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </backgroundConfiguration>
-                            </buttonConfiguration>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0w-eP-i52">
-                            <rect key="frame" x="0.0" y="194" width="248" height="50"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <backgroundConfiguration key="background" cornerRadius="30">
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </backgroundConfiguration>
-                            </buttonConfiguration>
-                        </button>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="XZb-sC-epW" firstAttribute="height" secondItem="2ma-QZ-snD" secondAttribute="height" id="EBt-9v-jrM"/>
-                        <constraint firstItem="d0w-eP-i52" firstAttribute="width" secondItem="2ma-QZ-snD" secondAttribute="width" id="X9H-bq-gNE"/>
-                        <constraint firstItem="d0w-eP-i52" firstAttribute="height" secondItem="2ma-QZ-snD" secondAttribute="height" id="bIA-bt-xwK"/>
-                        <constraint firstItem="XZb-sC-epW" firstAttribute="width" secondItem="2ma-QZ-snD" secondAttribute="width" id="pGN-TK-oDJ"/>
-                    </constraints>
-                </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24H-fk-qaT">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24H-fk-qaT">
                     <rect key="frame" x="19.5" y="144" width="375" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="375" id="kOl-oq-wer"/>
@@ -72,14 +28,20 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIA-rK-q4j" customClass="ButtonsMaker" customModule="QuizApp" customModuleProvider="target">
+                    <rect key="frame" x="20" y="438" width="374" height="314"/>
+                    <color key="backgroundColor" red="0.5607843137254902" green="0.76078431372549016" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.56263586139999999" green="0.76002624640000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="pIA-rK-q4j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="1mB-Nd-qtY"/>
+                <constraint firstItem="pIA-rK-q4j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="511-sZ-SoG"/>
                 <constraint firstItem="24H-fk-qaT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KnL-zI-5xE"/>
-                <constraint firstItem="jAU-fr-XhU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Lr3-ec-LGa"/>
                 <constraint firstItem="24H-fk-qaT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="VsB-ua-YM3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jAU-fr-XhU" secondAttribute="bottom" constant="200" id="qPM-mZ-qMV"/>
+                <constraint firstItem="pIA-rK-q4j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="438" id="arO-YF-IVC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pIA-rK-q4j" secondAttribute="bottom" constant="110" id="tPs-dF-NNr"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
         </view>

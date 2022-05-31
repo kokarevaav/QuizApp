@@ -6,6 +6,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
     }
     
     @IBAction func readyTouch(_ sender: Any) {

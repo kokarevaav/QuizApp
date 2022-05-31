@@ -2,28 +2,27 @@ import Foundation
 
 protocol SetupPresenterProtocol: AnyObject {
     init(view: SetupViewProtocol)
-    func getCategoriesList() -> [String]
-    func getSettings() -> (difficulty: String, category: String)
+    func getCategoriesList() -> [TriviaCategory]
+    func getSettings() -> String
 }
 
 class SetupPresenter: SetupPresenterProtocol {
     let view: SetupViewProtocol
     var difficulty: String
-    var category: String
+    var categories: [TriviaCategory]
 
     required init(view: SetupViewProtocol) {
         self.view = view
         self.difficulty = ""
-        self.category = ""
+        self.categories = []
     }
     
-    func getCategoriesList() -> [String] {
-        return Categories.categoriesList
+    func getCategoriesList() -> [TriviaCategory] {
+        return self.categories
     }
     
-    func getSettings() -> (difficulty: String, category: String){
+    func getSettings() -> String{
         difficulty = Difficulties.difficultyDictionary[view.getDifficultyLevel()]!
-        category = Categories.categoriesDictionary[view.getSelectedCategory()]!
-        return (difficulty, category)
+        return difficulty
     }
 }

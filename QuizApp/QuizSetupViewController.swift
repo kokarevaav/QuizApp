@@ -1,8 +1,8 @@
 import UIKit
 
 protocol SetupViewProtocol: AnyObject {
-    func getSelectedCategory() -> String
     func getDifficultyLevel() -> Float
+    func reloadView()
 }
 
 class QuizSetupViewController: UIViewController {
@@ -12,7 +12,7 @@ class QuizSetupViewController: UIViewController {
     @IBOutlet var doneButton: UIButton!
     
     var presenter: SetupPresenterProtocol!
-    var selectedCategory: String! = "General Knowledge"
+    var selectedCategory: TriviaCategory = TriviaCategory(id: 9, name: "General Knowledge")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,6 @@ class QuizSetupViewController: UIViewController {
         categoryPicker.setValue(UIColor.white, forKey: "textColor")
         categoryPicker.dataSource = self
         categoryPicker.delegate = self
-        
     }
 
     @IBAction func difficultySliderMoved(_ sender: Any) {
@@ -28,9 +27,8 @@ class QuizSetupViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-        let quizViewController = ModuleBuilder.createQuizModule(difficulty: presenter.getSettings().difficulty, category: presenter.getSettings().category)
+        let quizViewController = ModuleBuilder.createQuizModule(difficulty: presenter.getSettings(), category: self.selectedCategory)
         navigationController?.pushViewController(quizViewController, animated: true)
-        
     }
 }
 
@@ -46,7 +44,7 @@ extension QuizSetupViewController: UIPickerViewDataSource {
 
 extension QuizSetupViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return presenter.getCategoriesList()[row]
+        return presenter.getCategoriesList()[row].name
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -55,8 +53,10 @@ extension QuizSetupViewController: UIPickerViewDelegate {
 }
 
 extension QuizSetupViewController: SetupViewProtocol {
-    func getSelectedCategory() -> String {
-        return selectedCategory
+    func reloadView() {
+        DispatchQueue.main.async {
+            self.viewDidLoad()
+        }
     }
     
     func getDifficultyLevel() -> Float {

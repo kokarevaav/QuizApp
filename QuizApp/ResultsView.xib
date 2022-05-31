@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsViewController" customModule="QuizApp" customModuleProvider="target">
+            <connections>
+                <outlet property="congratsLabel" destination="Mal-OM-6WU" id="kbv-Te-Mtu"/>
+                <outlet property="homeButtton" destination="hJ5-eg-AWd" id="Hgz-hz-09j"/>
+                <outlet property="poinsLabel" destination="Nk0-zP-lRk" id="9vJ-vx-Zui"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ5-eg-AWd">
+                    <rect key="frame" x="167" y="592.5" width="80" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="FJf-4e-Htz"/>
+                        <constraint firstAttribute="height" constant="70" id="zXb-ZG-arj"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="house.circle.fill" catalog="system">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="homeButtonPressed" destination="-1" eventType="touchUpInside" id="n1z-Jm-lKc"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mal-OM-6WU">
+                    <rect key="frame" x="57" y="332" width="300" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="jV7-1f-RpZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nk0-zP-lRk">
+                    <rect key="frame" x="107" y="214" width="200" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="NwS-Qo-JNd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.56078431370000004" green="0.76078431369999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hJ5-eg-AWd" secondAttribute="bottom" constant="200" id="9Ba-ER-8Ce"/>
+                <constraint firstItem="Mal-OM-6WU" firstAttribute="top" secondItem="Nk0-zP-lRk" secondAttribute="bottom" constant="70" id="AMn-BO-O20"/>
+                <constraint firstItem="Nk0-zP-lRk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="H7o-Jc-csM"/>
+                <constraint firstItem="Mal-OM-6WU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jbp-40-MGj"/>
+                <constraint firstItem="Nk0-zP-lRk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="170" id="kNx-bT-Kn3"/>
+                <constraint firstItem="hJ5-eg-AWd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="167" id="tJ4-FO-cSG"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="house.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
