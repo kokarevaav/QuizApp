@@ -30,45 +30,6 @@ enum ApiType {
     }
 }
 
-//struct Categories {
-//    func getCategories() {
-//        ApiManager.apiManager.getCategories() { category in
-//            presenter.categories = category.map { category in
-//                    var c: TriviaCategory = category
-//                    c.name = category.name.replacingOccurrences(of: "Entertainment: ", with: "")
-//                    return c
-//                }
-//        }
-//    }
-    
-//    static var categories: [TriviaCategory] = ApiManager.apiManager.getCategories()
-    
-    
-    
-    
-    
-//map { category in
-//    var c: TriviaCategory = category
-//    c.name = category.name.replacingOccurrences(of: "Entertainment: ", with: "")
-//    return c
-//}
-
-//    static let categoriesDictionary: [String : String] = ["9" : "General Knowledge",
-//                                                          "Films" : "11",
-//                                                          "History" : "23",
-//                                                          "Geography" : "22",
-//                                                          "Animals" : "27",
-//                                                          "Music" : "12",
-//                                                          "Books" : "10"]
-//    static let categoriesList = ["General Knowledge",
-//                                 "Films",
-//                                 "History",
-//                                 "Geography",
-//                                 "Animals",
-//                                 "Music",
-//                                 "Books"]
-
-
 struct Difficulties {
     static let difficultyDictionary: [Float : String] = [1 : "easy",
                                                          2 : "medium",
@@ -76,7 +37,47 @@ struct Difficulties {
 }
 
 struct AmountOfQuestions {
-    static let amountDictionary: [String : String] = ["easy" : "15",
+    static let amountDictionary: [String : String] = ["easy" : "3",
                                                       "medium" : "10",
-                                                      "hard" : "3"]
+                                                      "hard" : "10"]
+}
+
+extension String {
+    init?(htmlEncodedString: String) {
+
+        guard let data = htmlEncodedString.data(using: .utf8) else {
+            return nil
+        }
+        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8.rawValue
+        ]
+        guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
+            return nil
+        }
+        self.init(attributedString.string)
+    }
+}
+
+struct NormalQuestions {
+    static let normal = NormalQuestions()
+    
+    func toNormalAnswers(answers: [String]) -> [String] {
+        answers.map { answer in
+            String(htmlEncodedString: answer)!
+        }
+    }
+    
+    func toNormalQuestions(questions: [Result]) -> [Result] {
+        let q = questions.map { question -> Result in
+            var q = question
+            let qString = String(htmlEncodedString: q.question)!
+            q.question = qString
+            let answersString = String(htmlEncodedString: q.correctAnswer)!
+            q.correctAnswer = answersString
+            q.incorrectAnswers = self.toNormalAnswers(answers: q.incorrectAnswers)
+            return q
+        }
+        return q
+    }
 }

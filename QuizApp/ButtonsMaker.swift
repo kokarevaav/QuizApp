@@ -5,8 +5,10 @@ class ButtonsMaker: UIView {
     func createButton(title: String, number: Int) -> UIButton {
         let btn: UIButton = {
             let button = UIButton()
+            button.titleLabel?.numberOfLines = 0
+            button.titleLabel?.lineBreakMode = .byWordWrapping
             button.setTitle(title, for: .normal)
-            button.setTitleColor(Config.Colors.primaryColor, for: .normal)
+            button.setTitleColor(Config.Colors.buttonTitleColor, for: .normal)
             button.backgroundColor = .white
             button.layer.cornerRadius = 25
             button.translatesAutoresizingMaskIntoConstraints = false

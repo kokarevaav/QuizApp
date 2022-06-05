@@ -14,3 +14,4 @@ class WelcomeViewController: UIViewController {
         navigationController?.pushViewController(setupViewController, animated: true)
     }
 }
+

@@ -8,6 +8,7 @@ protocol QuizPresenterProtocol: AnyObject {
     func getResults() -> (amount: Int, points: Int)
     func getCategory() -> TriviaCategory
     func isEnd() -> Bool
+    func isCorrectAnswer(title: String) -> Bool
 }
 
 class QuizPresenter: QuizPresenterProtocol {
@@ -42,6 +43,10 @@ class QuizPresenter: QuizPresenterProtocol {
             return q.question
         }
         return .none
+    }
+    
+    func isCorrectAnswer(title: String) -> Bool {
+        return currentQuestion?.correctAnswer == title ? true : false
     }
     
     func checkAnswer(answer: String) -> Bool{

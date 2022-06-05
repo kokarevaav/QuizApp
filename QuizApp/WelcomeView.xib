@@ -21,7 +21,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-8i-E8I">
                     <rect key="frame" x="36.5" y="229" width="341" height="142.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to QuizApp!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTX-EC-rdx">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to QuizApp!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qTX-EC-rdx">
                             <rect key="frame" x="4.5" y="0.0" width="332" height="39.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,7 +66,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.56263586139999999" green="0.76002624640000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.56078431370000004" green="0.76098769899999996" blue="0.99870151279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="jQb-8i-E8I" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="185" id="4qS-xb-Ost"/>
                 <constraint firstItem="gwJ-FO-hkc" firstAttribute="top" secondItem="jQb-8i-E8I" secondAttribute="bottom" constant="90" id="EU9-pV-5bx"/>

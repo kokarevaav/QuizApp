@@ -9,7 +9,7 @@ class ApiManager {
         let request = ApiType.getQuestions(amount: amount, category: String(category.id), difficulty: difficulty).request
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data, let questions = try? JSONDecoder().decode(Questions.self, from: data) {
-                completion(questions.results!)
+                completion(NormalQuestions.normal.toNormalQuestions(questions: questions.results!))
             } else {
                 completion([])
             }

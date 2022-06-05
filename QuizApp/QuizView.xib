@@ -10,6 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="QuizApp" customModuleProvider="target">
             <connections>
                 <outlet property="buttonsView" destination="pIA-rK-q4j" id="mRK-Xl-oab"/>
+                <outlet property="numberOfQuestionLabel" destination="hcc-Bo-gx1" id="J2A-0F-2QT"/>
+                <outlet property="pointsLabel" destination="u3Y-Er-0qU" id="2yr-g9-TV7"/>
                 <outlet property="questionLabel" destination="24H-fk-qaT" id="qIt-ke-pe9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,16 +34,38 @@
                     <rect key="frame" x="20" y="438" width="374" height="314"/>
                     <color key="backgroundColor" red="0.5607843137254902" green="0.76078431372549016" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hcc-Bo-gx1">
+                    <rect key="frame" x="30" y="74" width="80" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="OdY-Uq-yxC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u3Y-Er-0qU">
+                    <rect key="frame" x="214" y="74" width="170" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="bg9-sc-fPn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.56263586139999999" green="0.76002624640000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="pIA-rK-q4j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="1mB-Nd-qtY"/>
                 <constraint firstItem="pIA-rK-q4j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="511-sZ-SoG"/>
+                <constraint firstItem="u3Y-Er-0qU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="GXx-v8-alQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u3Y-Er-0qU" secondAttribute="trailing" constant="30" id="HUB-DE-6pa"/>
                 <constraint firstItem="24H-fk-qaT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KnL-zI-5xE"/>
                 <constraint firstItem="24H-fk-qaT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="VsB-ua-YM3"/>
                 <constraint firstItem="pIA-rK-q4j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="438" id="arO-YF-IVC"/>
+                <constraint firstItem="hcc-Bo-gx1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="siS-eC-tXO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pIA-rK-q4j" secondAttribute="bottom" constant="110" id="tPs-dF-NNr"/>
+                <constraint firstItem="hcc-Bo-gx1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="zHl-4h-Kfa"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
         </view>

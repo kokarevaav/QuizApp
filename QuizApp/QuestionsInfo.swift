@@ -16,8 +16,8 @@ struct Result: Codable {
     let category: String?
     let type: TypeEnum?
     let difficulty: Difficulty?
-    let question, correctAnswer: String
-    let incorrectAnswers: [String]
+    var question, correctAnswer: String
+    var incorrectAnswers: [String]
 
     enum CodingKeys: String, CodingKey {
         case category, type, difficulty, question

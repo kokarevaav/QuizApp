@@ -31,6 +31,12 @@ class ModuleBuilder: Builder {
         let quizView = QuizViewController()
         let quizPresenter = QuizPresenter(view: quizView)
         ApiManager.apiManager.getQuestions(category: category, difficulty: difficulty) { data in
+            guard !data.isEmpty else {
+                DispatchQueue.main.async {
+                    quizView.showAlert(title: "Oops! Something went wrong..", message: "Please check your internet connection and try again!")
+                }
+                return
+            }
             quizPresenter.questions = data
             quizPresenter.category = category
             quizPresenter.currentQuestion = quizPresenter.questions.popLast()
