@@ -69,59 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D93982582831A18000E41FE2 /* QuizSetupModule */ = {
-			isa = PBXGroup;
-			children = (
-				D9D062122830F510001A2E84 /* Presenter */,
-				D93982592831A1E300E41FE2 /* View */,
-			);
-			name = QuizSetupModule;
-			sourceTree = "<group>";
-		};
-		D93982592831A1E300E41FE2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D939825A2831A22700E41FE2 /* QuizSetupViewController.swift */,
-				D939825B2831A22700E41FE2 /* QuizSetupView.xib */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		D93F6D4D283E30C100560D38 /* QuizProcessModule */ = {
-			isa = PBXGroup;
-			children = (
-				D93F6D56283E32A500560D38 /* Presenter */,
-				D93F6D4E283E30D900560D38 /* View */,
-			);
-			name = QuizProcessModule;
-			sourceTree = "<group>";
-		};
-		D93F6D4E283E30D900560D38 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D9B88F0528417099002C6A22 /* ButtonsMaker.swift */,
-				D93F6D52283E312500560D38 /* QuizViewController.swift */,
-				D93F6D53283E312500560D38 /* QuizView.xib */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		D93F6D56283E32A500560D38 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				D93F6D57283E330500560D38 /* QuizPresenter.swift */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		D9B88F072841888B002C6A22 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				D9B88F08284188D9002C6A22 /* Config.swift */,
-			);
-			name = Config;
-			sourceTree = "<group>";
-		};
 		D9D061E22830F003001A2E84 = {
 			isa = PBXGroup;
 			children = (
@@ -141,96 +88,18 @@
 		D9D061ED2830F003001A2E84 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				D9DFE1B7285A6A5400B58D6E /* Config */,
+				D9DFE1B6285A6A4700B58D6E /* Resources */,
+				D9DFE1B5285A6A3200B58D6E /* SystemFiles */,
+				D9DFE1B2285A69E300B58D6E /* Networking */,
+				D9DFE1B1285A69CA00B58D6E /* Model */,
+				D9DFE1AF285A699F00B58D6E /* WelcomeModule */,
+				D9DFE1AC285A695F00B58D6E /* QuizSetupModule */,
+				D9DFE1A9285A68C800B58D6E /* QuizProcessModule */,
 				D9DFE1A5285A67CE00B58D6E /* ResultsModule */,
 				D9DFE1A4285A677000B58D6E /* ModuleBuilder */,
-				D93F6D4D283E30C100560D38 /* QuizProcessModule */,
-				D93982582831A18000E41FE2 /* QuizSetupModule */,
-				D9D0620F2830F4A9001A2E84 /* WelcomeModule */,
-				D9DE1E31283D7DD70065C504 /* Model */,
-				D9D062032830F0C3001A2E84 /* Networking */,
-				D9D062022830F09E001A2E84 /* Supporting files */,
-				D9D0620B2830F249001A2E84 /* Resources */,
-				D9B88F072841888B002C6A22 /* Config */,
 			);
 			path = QuizApp;
-			sourceTree = "<group>";
-		};
-		D9D062022830F09E001A2E84 /* Supporting files */ = {
-			isa = PBXGroup;
-			children = (
-				D9D061FC2830F005001A2E84 /* Info.plist */,
-				D9D061F02830F003001A2E84 /* SceneDelegate.swift */,
-				D9D061EE2830F003001A2E84 /* AppDelegate.swift */,
-			);
-			name = "Supporting files";
-			sourceTree = "<group>";
-		};
-		D9D062032830F0C3001A2E84 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				D9D062082830F197001A2E84 /* Codable */,
-				D9D062062830F142001A2E84 /* NetworkService */,
-			);
-			name = Networking;
-			sourceTree = "<group>";
-		};
-		D9D062062830F142001A2E84 /* NetworkService */ = {
-			isa = PBXGroup;
-			children = (
-				D9D062042830F0DD001A2E84 /* ApiManager.swift */,
-			);
-			name = NetworkService;
-			sourceTree = "<group>";
-		};
-		D9D062082830F197001A2E84 /* Codable */ = {
-			isa = PBXGroup;
-			children = (
-				D9D062092830F1D7001A2E84 /* QuestionsInfo.swift */,
-				D9E14B0C2843AD0F0088E986 /* CategoriesInfo.swift */,
-			);
-			name = Codable;
-			sourceTree = "<group>";
-		};
-		D9D0620B2830F249001A2E84 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D9D061F92830F005001A2E84 /* LaunchScreen.storyboard */,
-				D9D061F72830F005001A2E84 /* Assets.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		D9D0620F2830F4A9001A2E84 /* WelcomeModule */ = {
-			isa = PBXGroup;
-			children = (
-				D9D062102830F4FB001A2E84 /* View */,
-			);
-			name = WelcomeModule;
-			sourceTree = "<group>";
-		};
-		D9D062102830F4FB001A2E84 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D9398254283129FA00E41FE2 /* WelcomeViewController.swift */,
-				D9398255283129FA00E41FE2 /* WelcomeView.xib */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		D9D062122830F510001A2E84 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				D9D062132830F582001A2E84 /* SetupPresenter.swift */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		D9DE1E31283D7DD70065C504 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D9DE1E32283D7E140065C504 /* Settings.swift */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		D9DFE1A4285A677000B58D6E /* ModuleBuilder */ = {
@@ -244,29 +113,158 @@
 		D9DFE1A5285A67CE00B58D6E /* ResultsModule */ = {
 			isa = PBXGroup;
 			children = (
-				D9E14B0928438BB50088E986 /* Presenter */,
-				D9E14B04284386830088E986 /* View */,
+				D9DFE1A6285A685700B58D6E /* Presenter */,
+				D9DFE1A7285A686100B58D6E /* View */,
 			);
 			path = ResultsModule;
 			sourceTree = "<group>";
 		};
-		D9E14B04284386830088E986 /* View */ = {
+		D9DFE1A6285A685700B58D6E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D9E14B0A28438BF50088E986 /* ResultsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D9DFE1A7285A686100B58D6E /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D9E14B05284386D60088E986 /* ResultsViewController.swift */,
 				D9E14B06284386D60088E986 /* ResultsView.xib */,
 			);
-			name = View;
-			path = ..;
+			path = View;
 			sourceTree = "<group>";
 		};
-		D9E14B0928438BB50088E986 /* Presenter */ = {
+		D9DFE1A9285A68C800B58D6E /* QuizProcessModule */ = {
 			isa = PBXGroup;
 			children = (
-				D9E14B0A28438BF50088E986 /* ResultsPresenter.swift */,
+				D9DFE1AB285A691500B58D6E /* View */,
+				D9DFE1AA285A690400B58D6E /* Presenter */,
 			);
-			name = Presenter;
-			path = ..;
+			path = QuizProcessModule;
+			sourceTree = "<group>";
+		};
+		D9DFE1AA285A690400B58D6E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D93F6D57283E330500560D38 /* QuizPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D9DFE1AB285A691500B58D6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9B88F0528417099002C6A22 /* ButtonsMaker.swift */,
+				D93F6D52283E312500560D38 /* QuizViewController.swift */,
+				D93F6D53283E312500560D38 /* QuizView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9DFE1AC285A695F00B58D6E /* QuizSetupModule */ = {
+			isa = PBXGroup;
+			children = (
+				D9DFE1AE285A697F00B58D6E /* View */,
+				D9DFE1AD285A696D00B58D6E /* Presenter */,
+			);
+			path = QuizSetupModule;
+			sourceTree = "<group>";
+		};
+		D9DFE1AD285A696D00B58D6E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D9D062132830F582001A2E84 /* SetupPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D9DFE1AE285A697F00B58D6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D939825A2831A22700E41FE2 /* QuizSetupViewController.swift */,
+				D939825B2831A22700E41FE2 /* QuizSetupView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9DFE1AF285A699F00B58D6E /* WelcomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				D9DFE1B0285A69B600B58D6E /* View */,
+			);
+			path = WelcomeModule;
+			sourceTree = "<group>";
+		};
+		D9DFE1B0285A69B600B58D6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9398254283129FA00E41FE2 /* WelcomeViewController.swift */,
+				D9398255283129FA00E41FE2 /* WelcomeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9DFE1B1285A69CA00B58D6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9DE1E32283D7E140065C504 /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D9DFE1B2285A69E300B58D6E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D9DFE1B4285A6A1700B58D6E /* NetworkService */,
+				D9DFE1B3285A69F600B58D6E /* Codable */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D9DFE1B3285A69F600B58D6E /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				D9D062092830F1D7001A2E84 /* QuestionsInfo.swift */,
+				D9E14B0C2843AD0F0088E986 /* CategoriesInfo.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		D9DFE1B4285A6A1700B58D6E /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				D9D062042830F0DD001A2E84 /* ApiManager.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		D9DFE1B5285A6A3200B58D6E /* SystemFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D9D061FC2830F005001A2E84 /* Info.plist */,
+				D9D061F02830F003001A2E84 /* SceneDelegate.swift */,
+				D9D061EE2830F003001A2E84 /* AppDelegate.swift */,
+			);
+			path = SystemFiles;
+			sourceTree = "<group>";
+		};
+		D9DFE1B6285A6A4700B58D6E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9D061F92830F005001A2E84 /* LaunchScreen.storyboard */,
+				D9D061F72830F005001A2E84 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9DFE1B7285A6A5400B58D6E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D9B88F08284188D9002C6A22 /* Config.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
