@@ -141,8 +141,8 @@
 		D9D061ED2830F003001A2E84 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				D9D0620C2830F36B001A2E84 /* ModuleBuilder */,
-				D9E14B032843862F0088E986 /* ResultsModule */,
+				D9DFE1A5285A67CE00B58D6E /* ResultsModule */,
+				D9DFE1A4285A677000B58D6E /* ModuleBuilder */,
 				D93F6D4D283E30C100560D38 /* QuizProcessModule */,
 				D93982582831A18000E41FE2 /* QuizSetupModule */,
 				D9D0620F2830F4A9001A2E84 /* WelcomeModule */,
@@ -200,14 +200,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		D9D0620C2830F36B001A2E84 /* ModuleBuilder */ = {
-			isa = PBXGroup;
-			children = (
-				D9D0620D2830F38F001A2E84 /* ModuleBuilder.swift */,
-			);
-			name = ModuleBuilder;
-			sourceTree = "<group>";
-		};
 		D9D0620F2830F4A9001A2E84 /* WelcomeModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,13 +233,21 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		D9E14B032843862F0088E986 /* ResultsModule */ = {
+		D9DFE1A4285A677000B58D6E /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				D9D0620D2830F38F001A2E84 /* ModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		D9DFE1A5285A67CE00B58D6E /* ResultsModule */ = {
 			isa = PBXGroup;
 			children = (
 				D9E14B0928438BB50088E986 /* Presenter */,
 				D9E14B04284386830088E986 /* View */,
 			);
-			name = ResultsModule;
+			path = ResultsModule;
 			sourceTree = "<group>";
 		};
 		D9E14B04284386830088E986 /* View */ = {
@@ -257,6 +257,7 @@
 				D9E14B06284386D60088E986 /* ResultsView.xib */,
 			);
 			name = View;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D9E14B0928438BB50088E986 /* Presenter */ = {
@@ -265,6 +266,7 @@
 				D9E14B0A28438BF50088E986 /* ResultsPresenter.swift */,
 			);
 			name = Presenter;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
